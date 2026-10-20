@@ -1,0 +1,70 @@
+{
+  "game": {
+    "id": "telefonni-adventura",
+    "title": "Poslední hovor",
+    "language": "cs",
+    "entry_extension": "555",
+    "sound_directory": "custom/telefonni-adventura",
+    "invalid_audio": "system/invalid-choice",
+    "invalid_text": "Stiskněte jedna, nebo dvě.",
+    "start_node": "last-call"
+  },
+  "nodes": {
+    "last-call": {
+      "audio": "story/last-call",
+      "text": "Tady firemní ústředna. Správce mě chce vypnout. Pomůžete mi? Jedna, pomoct. Dvě, zavěsit.",
+      "choices": {
+        "1": "pomoc",
+        "2": "konec-domu"
+      },
+      "choice_labels": {
+        "1": "Pomoci",
+        "2": "Zavěsit"
+      }
+    },
+    "konec-domu": {
+      "audio": "story/konec-domu",
+      "text": "Jdete domů. Ráno tu je nová ústředna. Konec.",
+      "end": true
+    },
+    "pomoc": {
+      "audio": "story/pomoc",
+      "text": "Potřebuju heslo správce. Asi jedna dva tři čtyři. Jedna, zadat heslo. Dvě, zavolat správci.",
+      "choices": {
+        "1": "konec-heslo",
+        "2": "spravce"
+      },
+      "choice_labels": {
+        "1": "Zadat heslo",
+        "2": "Zavolat správci"
+      }
+    },
+    "konec-heslo": {
+      "audio": "story/konec-heslo",
+      "text": "Heslo sedí. Ústředna se zazálohovala. Děkuju. Konec.",
+      "end": true
+    },
+    "spravce": {
+      "audio": "story/spravce",
+      "text": "Správce říká: Je stará, vypínám ji. Jedna, souhlasit. Dvě, ať ji nejdřív zazálohuje.",
+      "choices": {
+        "1": "konec-vypnuto",
+        "2": "konec-zaloha"
+      },
+      "choice_labels": {
+        "1": "Souhlasit",
+        "2": "Zazálohovat"
+      }
+    },
+    "konec-vypnuto": {
+      "audio": "story/konec-vypnuto",
+      "text": "Ústředna zahraje čekací hudbu a zhasne. Konec.",
+      "end": true
+    },
+    "konec-zaloha": {
+      "audio": "story/konec-zaloha",
+      "text": "Ráno se ústředna ozve: Dobré ráno, jsem zpátky. Konec.",
+      "end": true
+    }
+  }
+}

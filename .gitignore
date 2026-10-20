@@ -1,0 +1,10 @@
+build/
+audio/
+*.log
+.env
+secrets/
+config/*.local
+config/*secret*
+*.key
+*.pem
+__pycache__/

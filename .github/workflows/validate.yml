@@ -1,0 +1,34 @@
+name: Validate game and deployment files
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate story and generate dialplan
+        run: |
+          python tools/build_dialplan.py game/story.json build/extensions_telefonni_adventura.conf
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Check shell scripts
+        run: shellcheck scripts/*.sh
+
