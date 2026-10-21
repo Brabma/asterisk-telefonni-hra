@@ -1,6 +1,8 @@
 # Telefonní hra na Asterisku
 
-Krátká česká hra, na kterou se dá zavolat z běžného telefonu. Běží na Asterisku, open-source telefonní ústředně, na mém serveru s Ubuntu.
+Krátká česká hra, na kterou se dá zavolat z běžného telefonu. Dovoláte se na firemní linku, jejíž automat nechce být vypnutý. Běží na Asterisku, open-source telefonní ústředně, na mém serveru s Ubuntu.
+
+Děj a texty hry vytvořila AI. Hra je jen ukázka. Mou prací je telefonní zapojení, Asterisk a provoz serveru.
 
 ## Jak si zahrát
 
@@ -10,7 +12,7 @@ Krátká česká hra, na kterou se dá zavolat z běžného telefonu. Běží na
 
 Začátek hry:
 
-> Končí vám směna. Volá ústředna: Správce mě chce vypnout. Jedna, pomoct. Dvě, zavěsit.
+> Dobrý den, dovolali jste se do firmy Kancl. Pro technickou podporu stiskněte jedna. Pro spojení se správcem stiskněte dvě.
 
 ## Jak to funguje
 

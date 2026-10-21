@@ -45,10 +45,10 @@ Zavolat na **222 765 757**, každý průchod novým hovorem:
 
 | Volby | Konec |
 | --- | --- |
-| 2 → 2 → 2 | Profesionální útěk |
-| 1 → 1 → 1 → 1 → 1 | Kofeinová revoluce |
-| 1 → 1 → 1 → 1 → 2 | Věčné čekání |
-| 1 → 1 → 2 → 1 → 1 | Návrat stroje |
-| 1 → 1 → 2 → 1 → 2 | Hrdina podpory |
+| 1 → 2 | Ve frontě |
+| 1 → 1 → 1 → 1 | Kávovar |
+| 1 → 1 → 1 → 2 | Čekací hudba |
+| 2 → 2 → 1 | Vypnutí |
+| 2 → 2 → 2 | Záloha |
 
 Vyzkoušet také `9` a čekání bez stisku: má se ozvat upozornění a scéna se zopakuje.
