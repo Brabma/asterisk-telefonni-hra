@@ -101,9 +101,10 @@ asterisk -rx 'dialplan reload'
 entry_output="$(asterisk -rx 'dialplan show 555@telefonni-adventura-public' 2>&1)"
 printf '%s\n' "$entry_output"
 grep -Fq 'telefonni-adventura-entry' <<< "$entry_output"
-first_scene_output="$(asterisk -rx 'dialplan show s@telefonni-adventura-last-call' 2>&1)"
+start_node="$(python3 -c 'import json,sys; print(json.load(open(sys.argv[1],encoding="utf-8"))["game"]["start_node"])' "$story_file")"
+first_scene_output="$(asterisk -rx "dialplan show s@telefonni-adventura-$start_node" 2>&1)"
 printf '%s\n' "$first_scene_output"
-grep -Fq 'telefonni-adventura-last-call' <<< "$first_scene_output"
+grep -Fq "telefonni-adventura-$start_node" <<< "$first_scene_output"
 
 echo "[7/7] Installing a systemd health check"
 install -o root -g root -m 0755 \
