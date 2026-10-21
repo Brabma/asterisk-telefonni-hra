@@ -1,34 +1,24 @@
 # Telefonní hra na Asterisku
 
-Na tuhle krátkou hru se dá zavolat z běžného telefonu. Ozve se firemní ústředna, kterou chce správce vypnout. Tlačítky 1 a 2 rozhodujete, jak příběh dopadne. Hra má pět konců.
+Krátká česká hra, na kterou se dá zavolat z běžného telefonu. Běží na Asterisku, open-source telefonní ústředně, na mém serveru s Ubuntu.
 
 ## Jak si zahrát
 
-1. Zavolejte na **222 765 757**.
-2. Poslouchejte a vybírejte tlačítky **1** a **2** na číselníku telefonu.
-3. Po dohrání se hovor sám ukončí. Pro jiný konec zavolejte znovu.
+1. Zavolejte na **222 765 757**. Hovor stojí jako běžné volání na pevnou linku.
+2. Vybírejte tlačítky **1** a **2**, klidně i během hlášky.
+3. Na konci se hovor sám ukončí. Hra má pět konců, pro jiný zavolejte znovu.
 
-Stačí běžný mobil, žádná aplikace ani registrace. Volit lze i během hlášky.
+Začátek hry:
+
+> Končí vám směna. Volá ústředna: Správce mě chce vypnout. Jedna, pomoct. Dvě, zavěsit.
 
 ## Jak to funguje
 
-Hovor přijme operátor Odorik a předá ho přes SIP do Asterisku na mém serveru s Ubuntu. Asterisk přehrává nahrávky a podle stisknutých tlačítek pouští další část příběhu.
-
 ```text
-Váš telefon → Odorik → Asterisk na serveru → hra
+Váš telefon → operátor Odorik → SIP → Asterisk na serveru → hra
 ```
 
-## Co na projektu spravuji
-
-- **Připojení k operátorovi přes SIP/PJSIP** — aby se volající dovolal na server a slyšel zvuk.
-- **Pravidla hovoru a volby tlačítky** — Asterisk podle DTMF přechází mezi scénami. Pravidla se vytvářejí z českého scénáře.
-- **Linuxový server** — přístup přes SSH, firewall omezený na operátora, nasazení se zálohou a pravidelné kontroly služby.
-- **Kontrolu hovorů** — registraci k operátorovi, SIP zprávy, přehrávání zvuku a záznamy o průchodu hovoru.
-
-## Co je v repozitáři
-
-- [Scénář hry](game/SCENAR.md) a [jeho podoba pro generátor](game/story.json).
-- [Technické zapojení a diagnostika](docs/TECHNICAL.md), včetně nasazení, testování a příkazů pro Asterisk.
-- [Výsledky automatických kontrol](https://github.com/Brabma/asterisk-telefonni-hra/actions).
-
-Přihlašovací údaje a zvukové soubory nejsou veřejné. Postup vytvoření zvuků je v technickém návodu.
+- **SIP trunk** k operátorovi Odorik přes PJSIP, aby hovor došel na server a byl slyšet zvuk.
+- **Dialplan**, tedy pravidla, co Asterisk s hovorem dělá: přehraje hlášku a podle stisknutého tlačítka (DTMF) přejde na další scénu. Dialplan se vytváří automaticky ze [scénáře](game/SCENAR.md).
+- **Server**: přístup přes SSH s klíči, firewall povolený jen pro operátora, nasazení se zálohou a pravidelná kontrola služby.
+- **Diagnostika**: registrace u operátora, SIP zprávy, logy a záznamy hovorů. Podrobně v [technickém návodu](docs/TECHNICAL.md).
