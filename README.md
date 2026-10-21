@@ -6,7 +6,7 @@ Děj a texty hry vytvořila AI. Hra je jen ukázka. Mou prací je telefonní zap
 
 ## Jak si zahrát
 
-1. Zavolejte na **222 765 757**. Hovor stojí jako běžné volání na pevnou linku.
+1. Zavolejte na **222 765 757**. Je to běžné pražské číslo, ne placená linka. Hra si nic neúčtuje, zaplatíte jen obyčejný hovor podle svého tarifu.
 2. Vybírejte tlačítky **1** a **2**, klidně i během hlášky.
 3. Na konci se hovor sám ukončí. Hra má pět konců, pro jiný zavolejte znovu.
 
