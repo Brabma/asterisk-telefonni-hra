@@ -24,7 +24,7 @@
     },
     "podpora": {
       "audio": "story/podpora",
-      "text": "Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně jediný. Promiňte, teď mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.",
+      "text": "Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně tu nikdo jiný není. Promiňte, mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.",
       "choices": {
         "1": "pomoc",
         "2": "konec-fronta"
@@ -36,14 +36,14 @@
     },
     "spravce": {
       "audio": "story/spravce",
-      "text": "Správce má dnes volno. Nechte vzkaz mně. Správce mě totiž dnes vypíná. Pokud mi pomůžete, stiskněte jedna. Pokud má správce pravdu, stiskněte dvě.",
+      "text": "Správce je na poradě. Nechte vzkaz mně. Na té poradě se totiž rozhoduje, jestli mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud souhlasíte s vypnutím, stiskněte dvě.",
       "choices": {
         "1": "pomoc",
         "2": "rozhodnuti"
       },
       "choice_labels": {
         "1": "Pomoci ústředně",
-        "2": "Správce má pravdu"
+        "2": "Souhlasit s vypnutím"
       }
     },
     "pomoc": {
@@ -84,7 +84,7 @@
     },
     "rozhodnuti": {
       "audio": "story/rozhodnuti",
-      "text": "Ozve se správce. Kdo je na lince? Ta ústředna je stará a chová se divně. Pro vypnutí stiskněte jedna. Pokud ji mám nejdřív zazálohovat, stiskněte dvě.",
+      "text": "Správce se vrátil z porady a přebírá hovor. Ta ústředna je stará a chová se divně. Mám ji vypnout? Pro vypnutí stiskněte jedna. Pokud ji mám nejdřív zazálohovat, stiskněte dvě.",
       "choices": {
         "1": "konec-hrdina",
         "2": "konec-zaloha"
@@ -116,7 +116,7 @@
     },
     "konec-zaloha": {
       "audio": "story/konec-zaloha",
-      "text": "Správce ústřednu zazálohuje. Ráno vám pošle e-mail: Děkuju, jsem zpátky. Na shledanou.",
+      "text": "Správce ústřednu zazálohuje. Ráno vám ústředna pošle e-mail: Děkuju, jsem zpátky. Na shledanou.",
       "end": true
     }
   }

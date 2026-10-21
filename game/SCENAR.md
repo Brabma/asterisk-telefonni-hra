@@ -1,6 +1,8 @@
 # Scénář: Firemní linka
 
-Telefonní hra pro Asterisk. Volající se dovolá na firemní linku a volí tlačítky 1 a 2. Hra má 12 scén a 5 konců.
+Děj a texty hry vytvořila AI. Hra je jen ukázka telefonního zapojení.
+
+Volající se dovolá na firemní linku a volí tlačítky 1 a 2. Hra má 12 scén a 5 konců.
 
 Pravidla pro úpravy:
 - Text se čte do telefonu: krátké věty, čísla slovy.
@@ -18,17 +20,17 @@ Dobrý den, dovolali jste se do firmy Kancl. Pro technickou podporu stiskněte j
 
 ## [podpora]
 
-Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně jediný. Promiňte, teď mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.
+Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně tu nikdo jiný není. Promiňte, mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.
 
 - 1: Pomoci ústředně → [pomoc]
 - 2: Čekat na operátora → [konec-fronta]
 
 ## [spravce]
 
-Správce má dnes volno. Nechte vzkaz mně. Správce mě totiž dnes vypíná. Pokud mi pomůžete, stiskněte jedna. Pokud má správce pravdu, stiskněte dvě.
+Správce je na poradě. Nechte vzkaz mně. Na té poradě se totiž rozhoduje, jestli mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud souhlasíte s vypnutím, stiskněte dvě.
 
 - 1: Pomoci ústředně → [pomoc]
-- 2: Správce má pravdu → [rozhodnuti]
+- 2: Souhlasit s vypnutím → [rozhodnuti]
 
 ## [pomoc]
 
@@ -53,7 +55,7 @@ Tady je tma a ticho. Nelíbí se mi tu. Pokud mě pustíte do sítě, stiskněte
 
 ## [rozhodnuti]
 
-Ozve se správce. Kdo je na lince? Ta ústředna je stará a chová se divně. Pro vypnutí stiskněte jedna. Pokud ji mám nejdřív zazálohovat, stiskněte dvě.
+Správce se vrátil z porady a přebírá hovor. Ta ústředna je stará a chová se divně. Mám ji vypnout? Pro vypnutí stiskněte jedna. Pokud ji mám nejdřív zazálohovat, stiskněte dvě.
 
 - 1: Vypnout → [konec-hrdina]
 - 2: Zazálohovat → [konec-zaloha]
@@ -84,7 +86,7 @@ Konec hry.
 
 ## [konec-zaloha]
 
-Správce ústřednu zazálohuje. Ráno vám pošle e-mail: Děkuju, jsem zpátky. Na shledanou.
+Správce ústřednu zazálohuje. Ráno vám ústředna pošle e-mail: Děkuju, jsem zpátky. Na shledanou.
 
 Konec hry.
 
