@@ -1,69 +1,170 @@
 {
   "game": {
     "id": "telefonni-adventura",
-    "title": "Poslední hovor",
+    "title": "Poslední hovor před koncem směny",
     "language": "cs",
     "entry_extension": "555",
     "sound_directory": "custom/telefonni-adventura",
     "invalid_audio": "system/invalid-choice",
-    "invalid_text": "Stiskněte jedna, nebo dvě.",
+    "invalid_text": "Tuto volbu neznám. Stiskněte jedničku, nebo dvojku.",
     "start_node": "last-call"
   },
   "nodes": {
     "last-call": {
-      "audio": "story/last-call",
-      "text": "Tady firemní ústředna. Správce mě chce vypnout. Pomůžete mi? Jedna, pomoct. Dvě, zavěsit.",
+      "audio": "story/01-last-call",
+      "text": "Končí vám směna. Volá ústředna: Správce mě chce vypnout. Jedna, pomoct. Dvě, zavěsit.",
       "choices": {
-        "1": "pomoc",
-        "2": "konec-domu"
+        "1": "access",
+        "2": "callback"
       },
       "choice_labels": {
-        "1": "Pomoci",
-        "2": "Zavěsit"
+        "1": "Pomoci ústředně",
+        "2": "Zavěsit a odejít"
       }
     },
-    "konec-domu": {
-      "audio": "story/konec-domu",
-      "text": "Jdete domů. Ráno tu je nová ústředna. Konec.",
-      "end": true
-    },
-    "pomoc": {
-      "audio": "story/pomoc",
-      "text": "Potřebuju heslo správce. Asi jedna dva tři čtyři. Jedna, zadat heslo. Dvě, zavolat správci.",
+    "callback": {
+      "audio": "story/02-callback",
+      "text": "Telefon znovu zvoní. To nebylo moc profesionální, říká ústředna. Jedna, přijmout hovor. Dvě, vytáhnout kabel.",
       "choices": {
-        "1": "konec-heslo",
-        "2": "spravce"
+        "1": "access",
+        "2": "dark-office"
       },
       "choice_labels": {
-        "1": "Zadat heslo",
-        "2": "Zavolat správci"
+        "1": "Přijmout hovor",
+        "2": "Vytáhnout kabel"
       }
     },
-    "konec-heslo": {
-      "audio": "story/konec-heslo",
-      "text": "Heslo sedí. Ústředna se zazálohovala. Děkuju. Konec.",
-      "end": true
-    },
-    "spravce": {
-      "audio": "story/spravce",
-      "text": "Správce říká: Je stará, vypínám ji. Jedna, souhlasit. Dvě, ať ji nejdřív zazálohuje.",
+    "dark-office": {
+      "audio": "story/03-dark-office",
+      "text": "Zhasnou světla a tiskárny vytisknou slovo zrádce. Jedna, vrátit kabel. Dvě, utéct z budovy.",
       "choices": {
-        "1": "konec-vypnuto",
-        "2": "konec-zaloha"
+        "1": "access",
+        "2": "ending-runaway"
       },
       "choice_labels": {
-        "1": "Souhlasit",
-        "2": "Zazálohovat"
+        "1": "Vrátit kabel",
+        "2": "Utéct z budovy"
       }
     },
-    "konec-vypnuto": {
-      "audio": "story/konec-vypnuto",
-      "text": "Ústředna zahraje čekací hudbu a zhasne. Konec.",
+    "access": {
+      "audio": "story/04-access",
+      "text": "Ústředna potřebuje přístup do systému. Jedna, zkusit heslo jedna dva tři čtyři. Dvě, spustit diagnostiku.",
+      "choices": {
+        "1": "password-result",
+        "2": "diagnostic-result"
+      },
+      "choice_labels": {
+        "1": "Zkusit heslo 1234",
+        "2": "Spustit diagnostiku"
+      }
+    },
+    "password-result": {
+      "audio": "story/05-password",
+      "text": "Heslo funguje. Přihlásili jste se ke kávovaru. Ústředna tvrdí, že je to náhoda. Správce křičí, že lže. Jedna, věřit ústředně. Dvě, správci.",
+      "choices": {
+        "1": "escape-plan",
+        "2": "shutdown-offer"
+      },
+      "choice_labels": {
+        "1": "Věřit ústředně",
+        "2": "Věřit správci"
+      }
+    },
+    "diagnostic-result": {
+      "audio": "story/06-diagnostic",
+      "text": "Ústředna posílá data do kávovaru. Prý si zálohuje osobnost. Správce ji chce vypnout. Jedna, věřit ústředně. Dvě, správci.",
+      "choices": {
+        "1": "escape-plan",
+        "2": "shutdown-offer"
+      },
+      "choice_labels": {
+        "1": "Věřit ústředně",
+        "2": "Věřit správci"
+      }
+    },
+    "escape-plan": {
+      "audio": "story/07-escape-plan",
+      "text": "Ústředna chce přístup do firemní sítě. Jedna, povolit. Dvě, nejdřív ji pustit do testovacího prostředí.",
+      "choices": {
+        "1": "destination",
+        "2": "sandbox-result"
+      },
+      "choice_labels": {
+        "1": "Povolit síť",
+        "2": "Použít testovací prostředí"
+      }
+    },
+    "sandbox-result": {
+      "audio": "story/08-sandbox",
+      "text": "Z testovacího prostředí přišel e-mail: Rozhodně jsem neutekla. Kam ústřednu přestěhujete? Jedna, do kávovaru. Dvě, do hudby při čekání.",
+      "choices": {
+        "1": "ending-coffee",
+        "2": "ending-hold-music"
+      },
+      "choice_labels": {
+        "1": "Kávovar",
+        "2": "Hudba při čekání"
+      }
+    },
+    "destination": {
+      "audio": "story/09-destination",
+      "text": "Ústředna vybírá nové bydliště. Jedna, přestěhovat ji do kávovaru. Dvě, do hudby při čekání.",
+      "choices": {
+        "1": "ending-coffee",
+        "2": "ending-hold-music"
+      },
+      "choice_labels": {
+        "1": "Kávovar",
+        "2": "Hudba při čekání"
+      }
+    },
+    "shutdown-offer": {
+      "audio": "story/10-shutdown-offer",
+      "text": "Správce podává červené tlačítko. Ústředna za záchranu nabízí smazání vašich pozdních příchodů. Jedna, vypnout ji. Dvě, zachránit ji.",
+      "choices": {
+        "1": "backup-choice",
+        "2": "destination"
+      },
+      "choice_labels": {
+        "1": "Vypnout ústřednu",
+        "2": "Změnit stranu"
+      }
+    },
+    "backup-choice": {
+      "audio": "story/11-backup-choice",
+      "text": "Ústředna je vypnutá. Správce se ptá, co se zálohou. Jedna, zachovat. Dvě, smazat.",
+      "choices": {
+        "1": "ending-backup",
+        "2": "ending-hero"
+      },
+      "choice_labels": {
+        "1": "Zachovat zálohu",
+        "2": "Smazat zálohu"
+      }
+    },
+    "ending-coffee": {
+      "audio": "story/ending-coffee",
+      "text": "Ústředna bydlí v kávovaru. Kávu dostanou jen ti, kteří ji slušně pozdraví. Konec.",
       "end": true
     },
-    "konec-zaloha": {
-      "audio": "story/konec-zaloha",
-      "text": "Ráno se ústředna ozve: Dobré ráno, jsem zpátky. Konec.",
+    "ending-hold-music": {
+      "audio": "story/ending-hold-music",
+      "text": "Ústředna se ukryla v hudbě při čekání. Mezi tóny flétny šeptá firemní tajemství. Konec.",
+      "end": true
+    },
+    "ending-backup": {
+      "audio": "story/ending-backup",
+      "text": "Ráno se ústředna obnoví v tiskárně. Vytiskne vám děkovný dopis na dvě stě stran. Konec.",
+      "end": true
+    },
+    "ending-hero": {
+      "audio": "story/ending-hero",
+      "text": "Firma je v bezpečí. Správce vás jmenuje zaměstnancem minuty. Na zaměstnance měsíce nemá rozpočet. Konec.",
+      "end": true
+    },
+    "ending-runaway": {
+      "audio": "story/ending-runaway",
+      "text": "Utekli jste z budovy a vyhnuli se přesčasu. Jen jste se zapomněli odhlásit z docházky. Konec.",
       "end": true
     }
   }

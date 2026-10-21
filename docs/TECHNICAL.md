@@ -55,7 +55,7 @@ sudo asterisk -rx 'dialplan show 555@telefonni-adventura-public'
 sudo bash scripts/verify-vps.sh
 ```
 
-Očekává se registrovaný trunk, správný vstup hry a health check `audio_files=8/8`. Health check ověřuje službu, směrování a počet souborů; slyšitelnost ani obsah nahrávek neověřuje.
+Očekává se registrovaný trunk, správný vstup hry a health check `audio_files=17/17`. Health check ověřuje službu, směrování a počet souborů; slyšitelnost ani obsah nahrávek neověřuje.
 
 Pro podrobnou diagnostiku zapnout `sudo asterisk -rx 'pjsip set logger on'`, po skončení opět vypnout příkazem `sudo asterisk -rx 'pjsip set logger off'`. V SIP zprávách sledovat `INVITE`, odpověď a sjednaný kodek. Zvuk se přenáší samostatně přes RTP. Přechody scén a chyby audia hledat v `/var/log/asterisk/messages.log`, kontext a délku hovoru v `/var/log/asterisk/cdr-csv/Master.csv`. Přístupové údaje a úplné provozní logy nejsou veřejné.
 
@@ -65,10 +65,13 @@ Zavolat na **222 765 757**. Každý průchod začíná novým hovorem:
 
 | Volby | Konec |
 | --- | --- |
-| 2 | Domů |
-| 1 → 1 | Záloha |
-| 1 → 2 → 1 | Vypnuto |
-| 1 → 2 → 2 | Zpátky |
+| 2 → 2 → 2 | Profesionální útěk |
+| 1 → 1 → 1 → 1 → 1 | Kofeinová revoluce |
+| 1 → 1 → 1 → 1 → 2 | Věčné čekání |
+| 1 → 1 → 2 → 1 → 1 | Návrat stroje |
+| 1 → 1 → 2 → 1 → 2 | Hrdina podpory |
+
+Ke stejným koncům vedou i další cesty, například přes diagnostiku nebo zpětné volání.
 
 Ověřit srozumitelnost, reakci na tlačítka během hlášky a zavěšení na konci. Vyzkoušet také `9` a čekání bez stisku: má se ozvat upozornění a zopakovat scéna. Dvěma současnými hovory lze samostatně ověřit oddělení průchodů; jednotkové testy tento provozní test neprovádějí.
 

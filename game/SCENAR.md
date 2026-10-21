@@ -1,55 +1,119 @@
-# Scénář: Poslední hovor
+# Scénář: Poslední hovor před koncem směny
 
-Telefonní hra pro Asterisk. Volající poslouchá a volí tlačítky 1 a 2.
+Telefonní hra pro Asterisk. Volající poslouchá a volí tlačítky 1 a 2. Hra má 16 scén a 5 konců.
 
 Pravidla pro úpravy:
-- Text se čte do telefonu: krátké věty, čísla slovy. Úvod do volby by měl trvat do sedmi sekund.
-- Každá scéna má buď dvě volby se šipkou na další scénu, nebo končí slovem Konec.
-- Názvy v hranatých závorkách [id] neměň, podle nich se scény propojují. Nové scéně dej nové id.
+- Text se čte do telefonu: krátké věty, čísla slovy.
+- Scéna má buď dvě volby se šipkou na další scénu, nebo je koncem.
+- Názvy v hranatých závorkách [id] neměň, podle nich se scény propojují.
 
 Start: [last-call]
 
-## [last-call] Ústředna
+## [last-call]
 
-Tady firemní ústředna. Správce mě chce vypnout. Pomůžete mi?
+Končí vám směna. Volá ústředna: Správce mě chce vypnout. Jedna, pomoct. Dvě, zavěsit.
 
-Jedna, pomoct. Dvě, zavěsit.
+- 1: Pomoci ústředně → [access]
+- 2: Zavěsit a odejít → [callback]
 
-- 1: Pomoci → [pomoc]
-- 2: Zavěsit → [konec-domu]
+## [callback]
 
-## [konec-domu] Domů
+Telefon znovu zvoní. To nebylo moc profesionální, říká ústředna. Jedna, přijmout hovor. Dvě, vytáhnout kabel.
 
-Jdete domů. Ráno tu je nová ústředna. Konec.
+- 1: Přijmout hovor → [access]
+- 2: Vytáhnout kabel → [dark-office]
 
-## [pomoc] Heslo
+## [dark-office]
 
-Potřebuju heslo správce. Asi jedna dva tři čtyři.
+Zhasnou světla a tiskárny vytisknou slovo zrádce. Jedna, vrátit kabel. Dvě, utéct z budovy.
 
-Jedna, zadat heslo. Dvě, zavolat správci.
+- 1: Vrátit kabel → [access]
+- 2: Utéct z budovy → [ending-runaway]
 
-- 1: Zadat heslo → [konec-heslo]
-- 2: Zavolat správci → [spravce]
+## [access]
 
-## [konec-heslo] Záloha
+Ústředna potřebuje přístup do systému. Jedna, zkusit heslo jedna dva tři čtyři. Dvě, spustit diagnostiku.
 
-Heslo sedí. Ústředna se zazálohovala. Děkuju. Konec.
+- 1: Zkusit heslo 1234 → [password-result]
+- 2: Spustit diagnostiku → [diagnostic-result]
 
-## [spravce] Správce
+## [password-result]
 
-Správce říká: Je stará, vypínám ji.
+Heslo funguje. Přihlásili jste se ke kávovaru. Ústředna tvrdí, že je to náhoda. Správce křičí, že lže. Jedna, věřit ústředně. Dvě, správci.
 
-Jedna, souhlasit. Dvě, ať ji nejdřív zazálohuje.
+- 1: Věřit ústředně → [escape-plan]
+- 2: Věřit správci → [shutdown-offer]
 
-- 1: Souhlasit → [konec-vypnuto]
-- 2: Zazálohovat → [konec-zaloha]
+## [diagnostic-result]
 
-## [konec-vypnuto] Vypnuto
+Ústředna posílá data do kávovaru. Prý si zálohuje osobnost. Správce ji chce vypnout. Jedna, věřit ústředně. Dvě, správci.
 
-Ústředna zahraje čekací hudbu a zhasne. Konec.
+- 1: Věřit ústředně → [escape-plan]
+- 2: Věřit správci → [shutdown-offer]
 
-## [konec-zaloha] Zpátky
+## [escape-plan]
 
-Ráno se ústředna ozve: Dobré ráno, jsem zpátky. Konec.
+Ústředna chce přístup do firemní sítě. Jedna, povolit. Dvě, nejdřív ji pustit do testovacího prostředí.
 
-Neplatná volba: Stiskněte jedna, nebo dvě.
+- 1: Povolit síť → [destination]
+- 2: Použít testovací prostředí → [sandbox-result]
+
+## [sandbox-result]
+
+Z testovacího prostředí přišel e-mail: Rozhodně jsem neutekla. Kam ústřednu přestěhujete? Jedna, do kávovaru. Dvě, do hudby při čekání.
+
+- 1: Kávovar → [ending-coffee]
+- 2: Hudba při čekání → [ending-hold-music]
+
+## [destination]
+
+Ústředna vybírá nové bydliště. Jedna, přestěhovat ji do kávovaru. Dvě, do hudby při čekání.
+
+- 1: Kávovar → [ending-coffee]
+- 2: Hudba při čekání → [ending-hold-music]
+
+## [shutdown-offer]
+
+Správce podává červené tlačítko. Ústředna za záchranu nabízí smazání vašich pozdních příchodů. Jedna, vypnout ji. Dvě, zachránit ji.
+
+- 1: Vypnout ústřednu → [backup-choice]
+- 2: Změnit stranu → [destination]
+
+## [backup-choice]
+
+Ústředna je vypnutá. Správce se ptá, co se zálohou. Jedna, zachovat. Dvě, smazat.
+
+- 1: Zachovat zálohu → [ending-backup]
+- 2: Smazat zálohu → [ending-hero]
+
+## [ending-coffee]
+
+Ústředna bydlí v kávovaru. Kávu dostanou jen ti, kteří ji slušně pozdraví. Konec.
+
+Konec hry.
+
+## [ending-hold-music]
+
+Ústředna se ukryla v hudbě při čekání. Mezi tóny flétny šeptá firemní tajemství. Konec.
+
+Konec hry.
+
+## [ending-backup]
+
+Ráno se ústředna obnoví v tiskárně. Vytiskne vám děkovný dopis na dvě stě stran. Konec.
+
+Konec hry.
+
+## [ending-hero]
+
+Firma je v bezpečí. Správce vás jmenuje zaměstnancem minuty. Na zaměstnance měsíce nemá rozpočet. Konec.
+
+Konec hry.
+
+## [ending-runaway]
+
+Utekli jste z budovy a vyhnuli se přesčasu. Jen jste se zapomněli odhlásit z docházky. Konec.
+
+Konec hry.
+
+Neplatná volba: Tuto volbu neznám. Stiskněte jedničku, nebo dvojku.

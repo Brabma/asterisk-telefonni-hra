@@ -1,6 +1,6 @@
 # Telefonní hra na Asterisku
 
-Na tuhle krátkou hru se dá zavolat z běžného telefonu. Ozve se firemní ústředna, kterou chce správce vypnout. Tlačítky 1 a 2 rozhodujete, jak příběh dopadne. Hra má čtyři konce a zabere přibližně minutu.
+Na tuhle krátkou hru se dá zavolat z běžného telefonu. Ozve se firemní ústředna, kterou chce správce vypnout. Tlačítky 1 a 2 rozhodujete, jak příběh dopadne. Hra má pět konců.
 
 ## Jak si zahrát
 
