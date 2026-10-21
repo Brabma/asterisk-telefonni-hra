@@ -6,7 +6,7 @@ if [[ ${EUID} -ne 0 ]]; then
   exit 1
 fi
 
-# SIP port must match the transport bind in pjsip (see config/pjsip-odorik.conf.example).
+# SIP port must match the transport bind in pjsip (see asterisk/pjsip-odorik.conf.example).
 sip_port="${SIP_PORT:-5060}"
 
 sip_addresses=(

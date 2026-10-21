@@ -19,6 +19,6 @@ Váš telefon → operátor Odorik → SIP → Asterisk na serveru → hra
 ```
 
 - **SIP trunk** k operátorovi Odorik přes PJSIP, aby hovor došel na server a byl slyšet zvuk.
-- **Dialplan**, tedy pravidla, co Asterisk s hovorem dělá: přehraje hlášku a podle stisknutého tlačítka (DTMF) přejde na další scénu. Dialplan se vytváří automaticky ze [scénáře](game/SCENAR.md).
+- **[Dialplan](asterisk/extensions_telefonni_adventura.conf)**, tedy pravidla, co Asterisk s hovorem dělá: přehraje hlášku a podle stisknutého tlačítka (DTMF) přejde na další scénu. Vytváří se automaticky ze [scénáře](game/SCENAR.md).
 - **Server**: přístup přes SSH s klíči, firewall povolený jen pro operátora, nasazení se zálohou a pravidelná kontrola služby.
 - **Diagnostika**: registrace u operátora, SIP zprávy, logy a záznamy hovorů. Podrobně v [technickém návodu](docs/TECHNICAL.md).
