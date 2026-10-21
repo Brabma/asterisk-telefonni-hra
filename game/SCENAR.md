@@ -20,7 +20,7 @@ Dobrý den, dovolali jste se do firmy Kancl. Pro technickou podporu stiskněte j
 
 ## [podpora]
 
-Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně tu nikdo jiný není. Promiňte, mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.
+Všichni operátoři jsou obsazeni. Vlastně tu žádní nejsou. Jsem ústředna a brzy mě vypnou. Pro pomoc stiskněte jedna. Pro čekání stiskněte dvě.
 
 - 1: Pomoci ústředně → [pomoc]
 - 2: Čekat na operátora → [konec-fronta]
@@ -74,7 +74,7 @@ Konec hry.
 
 ## [konec-hudba]
 
-Ústředna se schovala do čekací hudby. Když budete příště čekat na lince, poslouchejte pozorně. Na shledanou.
+Ústředna se schovala do čekací hudby. Každému volajícímu teď mezi dvěma tóny flétny šeptá firemní tajemství. Na shledanou.
 
 Konec hry.
 

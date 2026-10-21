@@ -24,7 +24,7 @@
     },
     "podpora": {
       "audio": "story/podpora",
-      "text": "Všichni operátoři jsou obsazeni. Jste první ve frontě. Vlastně tu nikdo jiný není. Promiňte, mluvím za sebe. Jsem ústředna a za pět minut mě vypnou. Pokud mi pomůžete, stiskněte jedna. Pokud chcete čekat na operátora, stiskněte dvě.",
+      "text": "Všichni operátoři jsou obsazeni. Vlastně tu žádní nejsou. Jsem ústředna a brzy mě vypnou. Pro pomoc stiskněte jedna. Pro čekání stiskněte dvě.",
       "choices": {
         "1": "pomoc",
         "2": "konec-fronta"
@@ -106,7 +106,7 @@
     },
     "konec-hudba": {
       "audio": "story/konec-hudba",
-      "text": "Ústředna se schovala do čekací hudby. Když budete příště čekat na lince, poslouchejte pozorně. Na shledanou.",
+      "text": "Ústředna se schovala do čekací hudby. Každému volajícímu teď mezi dvěma tóny flétny šeptá firemní tajemství. Na shledanou.",
       "end": true
     },
     "konec-hrdina": {
